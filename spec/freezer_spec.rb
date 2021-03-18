@@ -2,7 +2,7 @@ require_relative '../lib/freezer'
 
 describe 'A freezer' do
   let(:freezer) {Freezer.new}
-  before {ROOM_TEMPERATURE = 70}
+  before(:all) {ROOM_TEMPERATURE = 70}
   
   it 'has a capacity' do
     expect(freezer).to respond_to(:capacity)
