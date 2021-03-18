@@ -18,7 +18,7 @@ describe 'A water reservoir' do
 
 	describe 'emptiness' do
 		before do
-			reservoir = WaterReservoir.new(20, 0)
+			reservoir = WaterReservoir.new(10, 0)
 		end
 
 		it 'is initially empty' do
@@ -33,6 +33,15 @@ describe 'A water reservoir' do
 		it 'is no longer empty when we fill it' do
 			reservoir.fill
 			expect(reservoir).to_not be_empty
+		end
+	end
+
+	describe '#drain' do
+		it 'reduces volume of reservoir' do
+			reservoir = WaterReservoir.new(20, 10)
+			drain_volume = 10
+			remaining_volume = reservoir.current_water_volume - drain_volume
+			expect(reservoir.drain(drain_volume)).to eq(remaining_volume)
 		end
 	end
 
