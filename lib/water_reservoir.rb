@@ -17,7 +17,9 @@ class WaterReservoir
   end
 
   def drain(volume)
-    self.current_water_volume -= volume
+    if volume <= self.current_water_volume
+      self.current_water_volume -= volume
+    end
   end
 
 end

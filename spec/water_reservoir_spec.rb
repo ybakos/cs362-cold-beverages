@@ -28,4 +28,10 @@ describe 'A water reservoir' do
     expect(reservoir).to be_empty
   end
 
+  it 'does not drain more than available' do
+    reservoir = WaterReservoir.new(0, 10)
+    reservoir.drain(11)
+    expect(reservoir).to_not be_empty
+  end
+
 end
