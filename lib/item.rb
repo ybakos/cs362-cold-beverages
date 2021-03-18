@@ -4,6 +4,5 @@ class Item
   def initialize(name, volume)
     @name = name
     @volume = volume
-  end
-
+  end 
 end
