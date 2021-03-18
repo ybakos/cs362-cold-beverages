@@ -7,7 +7,9 @@ describe 'An item of food or a beverage' do
     item
   end
 
-
+  it 'has a name' do
+    expect(item).to respond_to(:name)
+  end
 
 
 end
