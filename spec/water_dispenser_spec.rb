@@ -6,7 +6,7 @@ describe 'A water dispenser' do
     WaterDispenser.new('Fake')
   end
 
-  it 'has a resovoir' do
+  it 'has a reservoir' do
     dispenser = WaterDispenser.new('Fake')
     expect(dispenser.reservoir).to eq('Fake')
   end
