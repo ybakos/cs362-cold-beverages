@@ -1,18 +1,18 @@
 class Vessel
-  attr_reader :name, :volume
+  attr_reader :name, :volume, :capacity
 
-  def initialize(name, volume)
+  def initialize(name, capacity)
     @name = name
-    @volume = volume
-    @empty = true
+    @capacity = capacity
+    @volume = 0
   end
 
   def empty?
-    @empty
+    volume == 0
   end
 
   def fill
-    @empty = false
+    @volume = capacity
   end
 
 end
