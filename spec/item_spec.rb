@@ -2,7 +2,7 @@ require_relative '../lib/item'
 
 describe 'An item of food or a beverage' do
 
-	let (:item) { Item.new('FAKE', 10) }
+	let(:item) { Item.new('FAKE', 10) }
 
   it 'exists' do
 		item
