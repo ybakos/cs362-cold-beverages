@@ -4,10 +4,15 @@ class Vessel
   def initialize(name='FAKE', volume=100)
     @name = name
     @volume = volume
+    @empty = true
   end
 
   def empty?
-    return true
+    @empty
+  end
+
+  def fill
+    @empty = false
   end
 
 end
