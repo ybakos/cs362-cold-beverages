@@ -9,4 +9,6 @@ describe 'A water dispenser' do
   end
 
   it 'drains from the vessel' do
+    # expect(water_dispenser.drain).to eq(vessel.volume)
   end
+end
