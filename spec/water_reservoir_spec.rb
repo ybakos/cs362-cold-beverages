@@ -33,5 +33,11 @@ describe 'A water reservoir' do
     reservoir.drain(volume)
     expect(reservoir.current_water_volume).to eq(0)
   end
+
+  it 'returns the amount drained' do
+    volume = 1
+    reservoir.fill
+    expect(reservoir.drain(volume)).to eq(volume)
+  end
   
 end
