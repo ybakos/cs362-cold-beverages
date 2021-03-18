@@ -6,8 +6,8 @@ class WaterDispenser
     @reservoir = reservoir
   end
 
-  def dispense(volume)
-    reservoir.drain(volume)
+  def dispense(vessel)
+    reservoir.drain(vessel.volume)
   end
 
 end
