@@ -7,6 +7,10 @@ class WaterDispenser
   end
 
   def dispense(vessel)
+    dispense_cast(vessel)
+  end
+
+  def dispense_cast(vessel)
     if check_reservoir_volume() == 1
       reservoir.drain(vessel.volume)
     end
