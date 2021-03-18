@@ -14,4 +14,8 @@ describe 'A water reservoir' do
   it 'has a current_water_volume' do
     expect(water_reservoir).to respond_to(:current_water_volume)
   end
+
+  it 'expects current_water_volume to be initialized to empty' do
+    expect(water_reservoir).to be_empty
+  end
 end
