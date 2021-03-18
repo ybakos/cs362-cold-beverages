@@ -10,4 +10,8 @@ describe 'A water reservoir' do
   it 'has a capacity' do
     expect(water_reservoir).to respond_to(:capacity)
   end
+
+  it 'has a current_water_volume' do
+    expect(water_reservoir).to respond_to(:current_water_volume)
+  end
 end
