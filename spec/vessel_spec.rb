@@ -18,4 +18,13 @@ describe 'A vessel for holding liquid' do
     vessel.fill
     expect(vessel).to_not be_empty
   end
+
+  
+  it 'fills vessel' do
+    skip
+    dispenser= WaterDispenser.new(5)
+    vessel = Vessel.new('FAKE', 5)
+    dispenser.fill(vessel)
+    expect(dispenser.reservoir).to eq(10)
+  end
 end
