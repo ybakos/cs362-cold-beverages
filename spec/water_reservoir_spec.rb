@@ -26,5 +26,12 @@ describe 'A water reservoir' do
     reservoir.drain(volume)
     expect(reservoir.current_water_volume).to eq(reservoir.capacity - volume)
   end
+
+  it 'will not drain to a volume less than 0' do
+    volume = reservoir.capacity + 1
+    reservoir.fill
+    reservoir.drain(volume)
+    expect(reservoir.current_water_volume).to eq(0)
+  end
   
 end
