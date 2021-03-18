@@ -9,4 +9,8 @@ describe 'An item of food or a beverage' do
   it 'item has name' do
     expect(item).to respond_to(:name)
   end
+
+  it 'item has volume' do
+    expect(item).to respond_to(:volume)
+  end
 end
