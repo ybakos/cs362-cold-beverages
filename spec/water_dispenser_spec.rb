@@ -6,4 +6,9 @@ describe 'A water dispenser' do
     WaterDispenser.new('Fake')
   end
 
+  it 'has a resovoir' do
+    dispenser = WaterDispenser.new('Fake')
+    expect(dispenser.reservoir).to eq('Fake')
+  end
+
 end
