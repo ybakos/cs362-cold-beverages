@@ -11,5 +11,8 @@ describe 'A water reservoir' do
   end
 
 
+  it 'reservoir has water volume' do
+    expect(reservoir).to respond_to(:initial_water_volume)
+  end
 
 end
