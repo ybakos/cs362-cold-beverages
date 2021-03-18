@@ -3,7 +3,15 @@ class Vessel
 
   def initialize(name, volume)
     @name = name
-    @volume = volume
+    @volume = 0
+  end
+
+  def empty?
+    if @volume == 0
+      true
+    else
+      false
+    end
   end
 
 end
