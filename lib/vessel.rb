@@ -11,8 +11,8 @@ class Vessel
     @amount_filled == 0
   end
 
-  def fill
-    @amount_filled = @volume
+  def fill(amount = @volume)
+    @amount_filled += amount
   end
 
 end
