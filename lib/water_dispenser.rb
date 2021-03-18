@@ -7,7 +7,7 @@ class WaterDispenser
   end
 
   def dispense(vessel)
-    reservoir.drain(vessel.volume)
+    if !empty? reservoir.drain(vessel.volume)
   end
 
 end
