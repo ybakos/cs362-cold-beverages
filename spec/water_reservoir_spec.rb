@@ -19,4 +19,10 @@ describe 'A water reservoir' do
     expect(reservoir.empty?).to be_truthy
   end
 
+  it 'full when filled' do
+    reservoir.fill
+    expect(reservoir.empty?).to be_falsey
+  end
+
+
 end
