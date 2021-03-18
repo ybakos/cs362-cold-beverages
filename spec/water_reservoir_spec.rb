@@ -13,4 +13,8 @@ describe 'A water reservoir' do
   it 'is tests if empty' do
     expect(@res).to_not be_empty
   end
+
+  it 'fills' do
+    expect(@res.fill).to eq(10)
+  end
 end
