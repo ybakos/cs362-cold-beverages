@@ -4,15 +4,16 @@ class Vessel
   def initialize(name = 'FAKE', volume = 100)
     @name = name
     @volume = volume
-    @empty = true
+    @current_filling = 0
   end
 
   def empty?
-    @empty
+    @current_filling
   end
 
-  def fill
-    @empty = false
+  def fill(vol = current_filling)
+    @current_filling = @volume if @current_filling + vol > @volume
+    @current_filling += vol
   end
 
 end

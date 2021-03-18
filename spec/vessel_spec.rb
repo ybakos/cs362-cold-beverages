@@ -10,12 +10,12 @@ describe 'A vessel for holding liquid' do
 
   it 'is initially empty' do
     vessel = Vessel.new('FAKE', 100)
-    expect(vessel).to be_empty
+    expect(vessel.empty?).to be_truthy
   end
 
   it 'is no longer empty when we fill it' do
     vessel = Vessel.new('FAKE', 100)
-    vessel.fill
-    expect(vessel).to_not be_empty
+    vessel.fill(5)
+    expect(vessel.empty?).to_not be_falsey
   end
 end
