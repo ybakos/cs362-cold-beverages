@@ -14,4 +14,8 @@ class Vessel
       @volume
   end    
 
+  def empty?
+    return TRUE
+  end  
+
 end
