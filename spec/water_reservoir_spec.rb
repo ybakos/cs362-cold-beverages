@@ -19,7 +19,6 @@ describe 'A water reservoir' do
 	describe 'emptiness' do
 		before do
 			reservoir = WaterReservoir.new(20, 0)
-			reservoir.fill
 		end
 
 		it 'is initially empty' do
