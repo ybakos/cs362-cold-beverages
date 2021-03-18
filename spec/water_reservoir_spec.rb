@@ -12,5 +12,20 @@ describe 'A water reservoir' do
   it 'has an initial volume' do
     expect(reservoir.current_water_volume).to eq(initial_water_volume)
   end
+  
+  it 'knows if the reservoir is not empty' do
+    reservoir.current_water_volume = 10
+    expect(reservoir.empty?).to be_falsey
+  end
+
+  it 'knows if the reservoir is empty' do
+    reservoir.current_water_volume = 0
+    expect(reservoir.empty?).to be_truthy
+  end
+
+  it 'fills the reservoir to a given capacity' do
+    reservoir.fill
+    expect(reservoir.current_water_volume).to eq(reservoir.capacity)
+  end
 
 end
