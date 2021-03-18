@@ -5,4 +5,11 @@ describe 'A water reservoir' do
   it 'dispenser exists' do
     reservoir
   end
+
+  it 'reservoir has capacity' do
+    expect(reservoir).to respond_to(:capacity)
+  end
+
+
+
 end
