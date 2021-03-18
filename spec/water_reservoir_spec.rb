@@ -18,4 +18,8 @@ describe 'A water reservoir' do
   it 'expects current_water_volume to be initialized to empty' do
     expect(water_reservoir).to be_empty
   end
+
+  it 'expects fill to return the capacity' do
+    expect(water_reservoir.fill).to eq(10)
+  end
 end
