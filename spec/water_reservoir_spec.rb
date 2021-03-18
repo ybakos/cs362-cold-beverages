@@ -12,7 +12,11 @@ describe 'A water reservoir' do
 
 
   it 'reservoir has water volume' do
-    expect(reservoir).to respond_to(:initial_water_volume)
+    expect(reservoir).to respond_to(:current_water_volume)
+  end
+
+  it 'empty at first' do
+    expect(reservoir.empty?).to be_empty
   end
 
 end
