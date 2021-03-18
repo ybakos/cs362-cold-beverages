@@ -8,6 +8,7 @@ describe 'A water dispenser' do
 
     vessel = double()
     allow(vessel).to receive(:volume).and_return(nil)
+    allow(vessel).to receive(:fill).and_return(nil)
 
     dispenser = WaterDispenser.new(reservoir)
     dispenser.dispense(vessel)
