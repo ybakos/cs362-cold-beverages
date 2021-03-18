@@ -7,6 +7,6 @@ describe 'A water reservoir' do
 
   it 'has a capacity and initial_water_volume' do
     expect(@res.capacity).to eq(10)
-    expect(@res.initial_water_volume).to eq(20)
+    expect(@res.current_water_volume).to eq(20)
   end
 end
