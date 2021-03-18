@@ -16,7 +16,7 @@ describe 'A water reservoir' do
   end
 
   it 'empty at first' do
-    expect(reservoir.empty?).to be_empty
+    expect(reservoir.empty?).to be_truthy
   end
 
 end
