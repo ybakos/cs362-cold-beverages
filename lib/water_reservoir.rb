@@ -17,7 +17,11 @@ class WaterReservoir
   end
 
   def drain(volume)
-    self.current_water_volume -= volume
+    if empty? == true
+      self.current_water_volume -= volume
+    else
+      puts "I'm already empty!"
+    end
   end
 
 end
