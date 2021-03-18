@@ -24,5 +24,9 @@ describe 'A water reservoir' do
     expect(reservoir.empty?).to be_falsey
   end
 
+  it 'empty when drained by current volume' do
+    reservoir.drain(reservoir.current_water_volume)
+    expect(reservoir.empty?).to be_truthy
+  end
 
 end
