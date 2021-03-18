@@ -1,6 +1,8 @@
 require_relative '../lib/vessel'
 
 describe 'A vessel for holding liquid' do
+  # let(:vessel) do Vessel.new
+  # end
 
   it 'has a name and volume' do
     vessel = Vessel.new
