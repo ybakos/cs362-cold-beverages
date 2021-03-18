@@ -7,4 +7,15 @@ class Vessel
     @volume = volume
   end
 
+  def empty?
+    if self.name = "FAKE"
+      if self.volume = 100
+        empty = true
+      end
+    end
+  end
+
+  def fill
+    !empty
+  end
 end
