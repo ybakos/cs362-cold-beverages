@@ -7,7 +7,10 @@ class WaterDispenser
   end
 
   def dispense(vessel)
-    if !empty? reservoir.drain(vessel.volume)
+   if reservoir.drain(vessel.volume).negative?
+    puts "Danger The dispenser has reached 0"
+    @volume = 0
+   end
   end
 
 end

@@ -15,6 +15,6 @@ describe 'A water reservoir' do
   end
 
   it 'fills' do
-    expect(@res.fill).to eq(10)
+    expect(@res.fill).to eq(30)
   end
 end

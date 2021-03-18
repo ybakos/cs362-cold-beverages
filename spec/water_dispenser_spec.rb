@@ -12,6 +12,6 @@ describe 'A water dispenser' do
   end
 
   it 'despenses water in a vessel' do
-    expect(@dispenser.dispense(@vessel)).to eq(-100)
+    expect(@dispenser.dispense(@vessel)).to eq(0)
   end
 end
