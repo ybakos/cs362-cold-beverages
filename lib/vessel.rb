@@ -7,7 +7,7 @@ class Vessel
   end
 
   def empty?
-    return @volume == 0
+    @volume == 0
   end
 
 end
