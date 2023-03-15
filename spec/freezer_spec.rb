@@ -29,7 +29,13 @@ describe 'A freezer' do
     expect(freezer.turn_off).to eq(:off)
   end
 
-  it 'can store contents' do
+  it 'can contain items' do
     expect {freezer.add(nil)}.to_not raise_error
+  end
+
+  it 'can have its temperature level set' do
+    temp = freezer.temperature
+    new_temp = freezer.set_level(1)
+    expect(new_temp).to eq(temp-10)
   end
 end
