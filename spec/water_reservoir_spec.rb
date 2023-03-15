@@ -21,7 +21,6 @@ describe 'A water reservoir' do
   end
 
   it 'can be filled to capacity' do
-    skip
     reservoir.fill
     expect(reservoir).to_not be_empty
     expect(reservoir.current_water_volume).to eq(10)
