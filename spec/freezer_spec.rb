@@ -20,4 +20,9 @@ describe 'A freezer' do
   it 'has a remaining capacity equal to its intial capacity' do
     expect(freezer.remaining_capacity).to eq(100)
   end
+
+  it 'has turn on and turn off methods' do
+    expect(freezer).to respond_to(:turn_on)
+    expect(freezer).to respond_to(:turn_off)
+  end
 end
