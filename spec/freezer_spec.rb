@@ -28,4 +28,8 @@ describe 'A freezer' do
   it 'can be turned off' do
     expect(freezer.turn_off).to eq(:off)
   end
+
+  it 'can store contents' do
+    expect {freezer.add(nil)}.to_not raise_error
+  end
 end
