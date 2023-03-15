@@ -21,8 +21,11 @@ describe 'A freezer' do
     expect(freezer.remaining_capacity).to eq(100)
   end
 
-  it 'has turn on and turn off methods' do
-    expect(freezer).to respond_to(:turn_on)
-    expect(freezer).to respond_to(:turn_off)
+  it 'can be turned on' do
+    expect(freezer.turn_on).to eq(:on)
+  end
+
+  it 'can be turned off' do
+    expect(freezer.turn_off).to eq(:off)
   end
 end
