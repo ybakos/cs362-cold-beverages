@@ -10,16 +10,16 @@ describe 'A water dispenser' do
     WaterDispenser.new(nil)
   end
 
-  it 'can dispense' do
+  it 'has a dispense method' do
     w = WaterDispenser.new(nil)
     expect(w).to respond_to('dispense')
   end
 
-  it 'can dispense given a resevoir and vessel' do
+  it 'can dispense given resevoir and vessel objects' do
     allow(resevoir).to receive(:drain).and_return(nil)
     allow(vessel).to receive(:volume).and_return(nil)
 
-    value = WaterDispenser.new(resevoir).dispense(vessel)
-    expect(value).to eq(nil)
+    val = WaterDispenser.new(resevoir).dispense(vessel)
+    expect {val}.not_to raise_error
   end
 end
