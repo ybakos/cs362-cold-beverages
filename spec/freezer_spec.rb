@@ -35,7 +35,6 @@ describe 'A freezer' do
 
   it 'can have its temperature level set' do
     temp = freezer.temperature
-    new_temp = freezer.set_level(1)
-    expect(new_temp).to eq(temp-10)
+    expect(freezer.set_level(1)).to eq(temp-10)
   end
 end
