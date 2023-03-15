@@ -15,4 +15,8 @@ describe 'A water reservoir' do
   it 'has a default initial water volume of 0' do
     expect(reservoir.current_water_volume).to eq(0)
   end
+
+  it 'is initially empty' do
+    expect(reservoir).to be_empty
+  end
 end
