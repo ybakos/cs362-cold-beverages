@@ -26,4 +26,8 @@ describe 'A refrigerator' do
     expect {refrigerator.freeze(nil)}.to_not raise_error
   end
 
+  it 'has a capacity equal to chiller + freezer capacities' do
+    expect(refrigerator.total_capacity).to eq(refrigerator.chiller.capacity + refrigerator.freezer.capacity)
+  end
+
 end
