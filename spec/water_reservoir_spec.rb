@@ -8,7 +8,11 @@ describe 'A water reservoir' do
     reservoir
   end
 
-  it 'has an initial state' do
+  it 'has a default initial capacity of ten' do
+    expect(reservoir.capacity).to eq(10)
+  end
 
+  it 'has a default initial water volume of 0' do
+    expect(reservoir.current_water_volume).to eq(0)
   end
 end
