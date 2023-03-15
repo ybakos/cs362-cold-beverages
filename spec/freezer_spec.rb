@@ -12,4 +12,12 @@ describe 'A freezer' do
   it 'has a default initial capacity' do
     expect(freezer.capacity).to eq(100)
   end
+
+  it 'has a constant initial temperature' do
+    expect(freezer.temperature).to eq(70)
+  end
+
+  it 'has a remaining capacity equal to its intial capacity' do
+    expect(freezer.remaining_capacity).to eq(100)
+  end
 end
