@@ -22,4 +22,8 @@ describe 'A refrigerator' do
     expect {refrigerator.chill(nil)}.to_not raise_error
   end
 
+  it 'can freeze' do
+    expect {refrigerator.freeze(nil)}.to_not raise_error
+  end
+
 end
