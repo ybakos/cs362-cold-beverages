@@ -19,7 +19,8 @@ describe 'A water dispenser' do
     allow(resevoir).to receive(:drain).and_return(nil)
     allow(vessel).to receive(:volume).and_return(nil)
 
-    val = WaterDispenser.new(resevoir).dispense(vessel)
-    expect {val}.not_to raise_error
+    expect {
+      WaterDispenser.new(resevoir).dispense(vessel)}
+      .not_to raise_error
   end
 end
