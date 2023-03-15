@@ -17,4 +17,9 @@ describe 'A refrigerator' do
   it 'can be instantiated' do
     refrigerator
   end
+
+  it 'can chill' do
+    expect {refrigerator.chill(nil)}.to_not raise_error
+  end
+
 end
