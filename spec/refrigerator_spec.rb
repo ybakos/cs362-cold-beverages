@@ -11,7 +11,10 @@ describe 'A refrigerator' do
       Chiller.new,
       Freezer.new,
       WaterReservoir.new,
-      WaterDispenser.new
-    )}
+      WaterDispenser.new(nil))
+  }
 
+  it 'can be instantiated' do
+    refrigerator
+  end
 end

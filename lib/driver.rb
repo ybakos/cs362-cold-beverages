@@ -12,7 +12,11 @@ freezer = Freezer.new
 water_reservoir = WaterReservoir.new
 water_dispenser = WaterDispenser.new(water_reservoir)
 
-refrigerator = Refrigerator.new(chiller, freezer, water_dispenser, water_reservoir)
+refrigerator = Refrigerator.new(
+  chiller,
+  freezer,
+  water_dispenser,
+  water_reservoir)
 
 puts refrigerator
 
