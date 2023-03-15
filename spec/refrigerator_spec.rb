@@ -30,4 +30,8 @@ describe 'A refrigerator' do
     expect(refrigerator.total_capacity).to eq(refrigerator.chiller.capacity + refrigerator.freezer.capacity)
   end
 
+  it 'has an initial capacity of foo' do
+    expect(refrigerator.total_capacity).to eq(200)
+  end
+
 end
