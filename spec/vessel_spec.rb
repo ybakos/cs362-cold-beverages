@@ -1,3 +1,4 @@
+require_relative 'spec_helper'
 require_relative '../lib/vessel'
 
 describe 'A vessel for holding liquid' do
