@@ -11,8 +11,8 @@ class Vessel
     @fill_level == 0
   end
 
-  def fill
-    @fill_level = volume
+  def fill(vol=volume)
+    @fill_level = vol
   end
-  
+
 end
