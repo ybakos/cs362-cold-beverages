@@ -56,4 +56,15 @@ describe 'A refrigerator' do
     expect(freezer.temperature).to eq(-10)
   end
 
+  it 'can report its status' do
+    expect(refrigerator.to_s).to eq(
+      <<~STATUS
+      Power: #{refrigerator.power}
+      Storage: #{refrigerator.remaining_capacity} of #{refrigerator.total_capacity} available
+      Temps: Chiller is #{chiller.temperature}, Freezer is #{freezer.temperature}
+      Water: Reservoir has #{water_reservoir.current_water_volume} remaining.
+      STATUS
+    )
+  end
+
 end
