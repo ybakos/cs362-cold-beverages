@@ -26,10 +26,10 @@ describe 'A freezer' do
     expect(freezer.contents).to eq([dumplings, beyond_brats])
   end
 
-  it 'can calculate its remaining capacity' do skip
-    freezer.add('dumplings')
-    freezer.add('Beyond Brats')
-    expect(freezer.remaining_capacity).to eq(98)
+  it 'can calculate its remaining capacity' do
+    freezer.add(dumplings)
+    freezer.add(beyond_brats)
+    expect(freezer.remaining_capacity).to eq(46)
   end
 
 end
