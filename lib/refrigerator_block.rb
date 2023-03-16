@@ -26,6 +26,7 @@ class RefrigeratorBlock
     capacity - @contents.map(&:volume).reduce(:+).to_i
   end
 
+  # @override in subclass
   def set_level(level, multiplier)
     @temperature = ROOM_TEMPERATURE - level * multiplier
   end
