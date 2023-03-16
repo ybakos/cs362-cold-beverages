@@ -22,4 +22,10 @@ describe 'A water dispenser' do
     expect(water_reservoir.current_water_volume).to eq(0)
   end
 
+  it 'can fill a vessel' do
+    vessel = Vessel.new('v3', 30)
+    water_dispenser.dispense(vessel)
+    expect(vessel.fill_level).to eq(30)
+  end
+
 end
