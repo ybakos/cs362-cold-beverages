@@ -23,5 +23,4 @@ class WaterReservoir
       @current_water_volume -= volume
     end
   end
-
 end

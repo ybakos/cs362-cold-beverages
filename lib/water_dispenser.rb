@@ -13,5 +13,4 @@ class WaterDispenser
     dispensed_volume = previous_volume - volume
     vessel.fill(dispensed_volume)
   end
-
 end

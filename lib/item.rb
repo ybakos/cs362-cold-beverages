@@ -9,5 +9,4 @@ class Item
   def empty?
     @volume == 0
   end
-
 end

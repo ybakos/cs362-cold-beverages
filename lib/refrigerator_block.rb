@@ -30,5 +30,4 @@ class RefrigeratorBlock
   def set_level(level, multiplier)
     @temperature = ROOM_TEMPERATURE - level * multiplier
   end
-
 end
