@@ -32,4 +32,9 @@ describe 'A chiller' do
     expect(chiller.remaining_capacity).to eq(72)
   end
 
+  it 'can set the temperature level' do
+    chiller.set_level(8)
+    expect(chiller.temperature).to eq(30)
+  end
+
 end
