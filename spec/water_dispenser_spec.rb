@@ -3,9 +3,6 @@ require_relative '../lib/water_dispenser'
 
 describe 'A water dispenser' do
 
-  let(:resevoir) { double('Reservoir') }
-  let(:vessel) { double('Vessel') }
-
   it 'can be instantiated' do
     WaterDispenser.new(nil)
   end
@@ -16,13 +13,25 @@ describe 'A water dispenser' do
   end
 
   it 'can dispense given resevoir and vessel objects' do
-    allow(resevoir).to receive(:drain).and_return(nil)
-    allow(resevoir).to receive(:current_water_volume).and_return(1)
-    allow(vessel).to receive(:volume).and_return(nil)
-    allow(vessel).to receive(:fill).and_return(nil)
+    reservoir = double('Reservoir')
+    allow(reservoir)
+      .to receive(:drain)
+      .and_return(nil)
+    allow(reservoir)
+      .to receive(:current_water_volume)
+      .and_return(1)
+
+    vessel = double('Vessel')
+    allow(vessel)
+      .to receive(:volume)
+      .and_return(nil)
+    allow(vessel)
+      .to receive(:fill)
+      .and_return(nil)
 
     expect {
-      WaterDispenser.new(resevoir).dispense(vessel)}
+      WaterDispenser.new(reservoir)
+      .dispense(vessel)}
       .not_to raise_error
   end
 end
