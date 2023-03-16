@@ -53,7 +53,7 @@ describe 'A refrigerator' do
     expect(refrigerator.unplug).to eq(:off)
   end
 
-  it 'can chill level 0 to 65 degrees' do
+  it 'can chill level 0 to 70 degrees' do
     expect(refrigerator.set_chiller_level(0)).to eq(70)
   end
 
@@ -61,8 +61,19 @@ describe 'A refrigerator' do
     expect(refrigerator.set_chiller_level(1)).to eq(65)
   end
 
-  it 'can chill level 3 to 70 degrees' do
+  it 'can chill level 3 to 55 degrees' do
     expect(refrigerator.set_chiller_level(3)).to eq(55)
   end
 
+  it 'can freeze level 0 to 70 degrees' do
+    expect(refrigerator.set_freezer_level(0)).to eq(70)
+  end
+
+  it 'can freeze level 1 to 60 degrees' do
+    expect(refrigerator.set_freezer_level(1)).to eq(60)
+  end
+
+  it 'can freeze level 3 to 40 degrees' do
+    expect(refrigerator.set_freezer_level(3)).to eq(40)
+  end
 end
