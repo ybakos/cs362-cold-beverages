@@ -35,8 +35,13 @@ describe 'A refrigerator' do
   end
 
   it 'has a remaining capacity equal to chiller + freezer remaining capacities' do
-    expect(refrigerator.remaining_capacity).to eq(refrigerator.chiller.remaining_capacity + refrigerator.freezer.remaining_capacity)
+    expect(
+      refrigerator.remaining_capacity)
+    .to eq(
+      refrigerator.chiller.remaining_capacity + refrigerator.freezer.remaining_capacity)
   end
 
-
+  it 'has an initial remaining capacity of two hundred' do
+    expect(refrigerator.total_capacity).to eq(200)
+  end
 end
