@@ -19,4 +19,11 @@ describe 'A water reservoir' do
     expect(water_reservoir.current_water_volume).to eq(10)
   end
 
+  it 'can drain a given volume' do
+    water_reservoir = WaterReservoir.new
+    water_reservoir.fill
+    water_reservoir.drain(5)
+    expect(water_reservoir.current_water_volume).to eq(5)
+  end
+
 end
