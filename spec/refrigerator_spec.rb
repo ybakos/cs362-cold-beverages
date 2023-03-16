@@ -44,4 +44,9 @@ describe 'A refrigerator' do
   it 'has an initial remaining capacity of two hundred' do
     expect(refrigerator.total_capacity).to eq(200)
   end
+
+  it 'can be turned on' do
+    expect(refrigerator.plug_in).to eq(:on)
+  end
+
 end
