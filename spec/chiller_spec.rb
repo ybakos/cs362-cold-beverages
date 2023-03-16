@@ -26,4 +26,10 @@ describe 'A chiller' do
     expect(chiller.contents).to eq([bagels, oat_milk])
   end
 
+  it 'can calculate the remaining capacity' do
+    chiller.add(bagels)
+    chiller.add(oat_milk)
+    expect(chiller.remaining_capacity).to eq(72)
+  end
+
 end
