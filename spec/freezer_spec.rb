@@ -13,4 +13,9 @@ describe 'A freezer' do
     expect(freezer.power).to eq(:on)
   end
 
+  it 'can turn its power off' do
+    freezer.turn_off
+    expect(freezer.power).to eq(:off)
+  end
+
 end
