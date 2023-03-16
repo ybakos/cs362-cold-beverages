@@ -13,4 +13,9 @@ describe 'A chiller' do
     expect(chiller.power).to eq(:on)
   end
 
+  it 'can turn power off' do
+    chiller.turn_off
+    expect(chiller.power).to eq(:off)
+  end
+
 end
