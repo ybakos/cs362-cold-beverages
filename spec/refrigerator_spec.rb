@@ -13,6 +13,7 @@ describe 'A refrigerator' do
   ) }
 
   let(:oat_milk) { Item.new('OatMilk', 22) }
+  let(:dumplings) { Item.new('Dumplings', 50) }
 
   it 'initializes with 4 dependencies' do
     expect(refrigerator.chiller).to eq(chiller)
@@ -24,6 +25,11 @@ describe 'A refrigerator' do
   it 'can add items to its chiller' do
     refrigerator.chill(oat_milk)
     expect(refrigerator.remaining_capacity).to eq(178)
+  end
+
+  it 'can add items to its freezer' do
+    refrigerator.freeze(dumplings)
+    expect(refrigerator.remaining_capacity).to eq(150)
   end
 
 end
