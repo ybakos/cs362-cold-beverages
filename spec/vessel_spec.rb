@@ -5,7 +5,6 @@ describe 'A vessel for holding liquid' do
 
   it 'has a name and volume' do
     vessel = Vessel.new('foo', 100)
-
     expect(vessel.name).to eq('foo')
     expect(vessel.volume).to eq(100)
   end
