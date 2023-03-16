@@ -17,7 +17,9 @@ describe 'A water dispenser' do
 
   it 'can dispense given resevoir and vessel objects' do
     allow(resevoir).to receive(:drain).and_return(nil)
+    allow(resevoir).to receive(:current_water_volume).and_return(1)
     allow(vessel).to receive(:volume).and_return(nil)
+    allow(vessel).to receive(:fill).and_return(nil)
 
     expect {
       WaterDispenser.new(resevoir).dispense(vessel)}
