@@ -1,10 +1,6 @@
-class Vessel
-  attr_reader :name, :volume
+require_relative 'item'
 
-  def initialize(name, volume)
-    @name = name
-    @volume = volume
-  end
+class Vessel < Item
 
   def empty?
     @volume == 0

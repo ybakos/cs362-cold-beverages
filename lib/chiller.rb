@@ -1,6 +1,6 @@
 require_relative 'refrigerator_block'
 
-class Freezer < RefrigeratorBlock
+class Chiller < RefrigeratorBlock
 
   def set_level(level)
     super(level, 5)
