@@ -32,4 +32,9 @@ describe 'A refrigerator' do
     expect(refrigerator.remaining_capacity).to eq(150)
   end
 
+  it 'can turn its power on by plugging in' do
+    refrigerator.plug_in
+    expect(refrigerator.power).to eq(:on)
+  end
+
 end
