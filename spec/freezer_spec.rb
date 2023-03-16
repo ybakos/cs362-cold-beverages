@@ -18,4 +18,10 @@ describe 'A freezer' do
     expect(freezer.power).to eq(:off)
   end
 
+  it 'can add items' do
+    freezer.add('dumplings')
+    freezer.add('Beyond Brats')
+    expect(freezer.contents).to eq(['dumplings', 'Beyond Brats'])
+  end
+  
 end
