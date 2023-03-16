@@ -53,4 +53,16 @@ describe 'A refrigerator' do
     expect(refrigerator.unplug).to eq(:off)
   end
 
+  it 'can chill level 0 to 65 degrees' do
+    expect(refrigerator.set_chiller_level(0)).to eq(70)
+  end
+
+  it 'can chill level 1 to 65 degrees' do
+    expect(refrigerator.set_chiller_level(1)).to eq(65)
+  end
+
+  it 'can chill level 3 to 70 degrees' do
+    expect(refrigerator.set_chiller_level(3)).to eq(55)
+  end
+
 end
