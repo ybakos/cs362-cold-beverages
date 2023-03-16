@@ -11,7 +11,13 @@ describe 'A water dispenser' do
   end
 
   it 'can dispense to a vessel' do
-    vessel = Vessel.new(100)
+    vessel = Vessel.new('v1', 100)
+    water_dispenser.dispense(vessel)
+    expect(water_reservoir.current_water_volume).to eq(0)
+  end
+
+  it 'can dispense onlyl what it has' do
+    vessel = Vessel.new('v2', 200)
     water_dispenser.dispense(vessel)
     expect(water_reservoir.current_water_volume).to eq(0)
   end
