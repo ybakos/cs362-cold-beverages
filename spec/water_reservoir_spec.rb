@@ -27,7 +27,7 @@ describe 'A water reservoir' do
   end
 
   it 'can be drained by a given volume' do
-    reservoir.drain(1)
-    expect(reservoir.current_water_volume).to eq(-1)
+    reservoir.drain(99)
+    expect(reservoir.current_water_volume).to eq(0)
   end
 end
