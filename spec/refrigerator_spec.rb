@@ -51,4 +51,9 @@ describe 'A refrigerator' do
     expect(chiller.temperature).to eq(30)
   end
 
+  it 'can set the temp of its freezer' do
+    refrigerator.set_freezer_level(8)
+    expect(freezer.temperature).to eq(-10)
+  end
+
 end
