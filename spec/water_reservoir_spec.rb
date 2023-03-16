@@ -26,7 +26,7 @@ describe 'A water reservoir' do
     expect(reservoir.current_water_volume).to eq(10)
   end
 
-  it 'can be drained by a given volume' do
+  it 'can be drained up to a given volume, but no less than zero' do
     reservoir.drain(99)
     expect(reservoir.current_water_volume).to eq(0)
   end
