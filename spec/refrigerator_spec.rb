@@ -49,4 +49,8 @@ describe 'A refrigerator' do
     expect(refrigerator.plug_in).to eq(:on)
   end
 
+  it 'can be turned off' do
+    expect(refrigerator.unplug).to eq(:off)
+  end
+
 end
