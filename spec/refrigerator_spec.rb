@@ -37,4 +37,9 @@ describe 'A refrigerator' do
     expect(refrigerator.power).to eq(:on)
   end
 
+  it 'can turn its power off by unplugging' do
+    refrigerator.unplug
+    expect(refrigerator.power).to eq(:off)
+  end
+
 end
