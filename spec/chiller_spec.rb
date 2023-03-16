@@ -8,4 +8,9 @@ describe 'A chiller' do
     expect(chiller.temperature).to eq(70)
   end
 
+  it 'can turn power on' do
+    chiller.turn_on
+    expect(chiller.power).to eq(:on)
+  end
+
 end
