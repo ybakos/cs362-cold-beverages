@@ -13,4 +13,10 @@ describe 'A water reservoir' do
     expect(water_reservoir).to be_empty
   end
 
+  it 'can fill its volume to capacity' do
+    water_reservoir = WaterReservoir.new
+    water_reservoir.fill
+    expect(water_reservoir.current_water_volume).to eq(10)
+  end
+
 end
