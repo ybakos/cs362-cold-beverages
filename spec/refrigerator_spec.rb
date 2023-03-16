@@ -10,8 +10,8 @@ describe 'A refrigerator' do
     Refrigerator.new(
       Chiller.new,
       Freezer.new,
-      WaterReservoir.new,
-      WaterDispenser.new(nil))
+      WaterDispenser.new(WaterReservoir.new),
+      WaterReservoir.new)
   }
 
   it 'can be instantiated' do
@@ -75,5 +75,16 @@ describe 'A refrigerator' do
 
   it 'can freeze level 3 to 40 degrees' do
     expect(refrigerator.set_freezer_level(3)).to eq(40)
+  end
+
+  it 'presents an accurate reflection of its state' do
+    expect(refrigerator.to_s).to eq(
+      <<~FOO
+      Power: off
+      Storage: 200 of 200 available
+      Temps: Chiller is 70, Freezer is 70
+      Water: Reservoir has 0 remaining.
+      FOO
+    )
   end
 end
