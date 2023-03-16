@@ -42,4 +42,9 @@ describe 'A refrigerator' do
     expect(refrigerator.power).to eq(:off)
   end
 
+  it 'can set the temp of its chiller' do
+    refrigerator.set_chiller_level(8)
+    expect(chiller.temperature).to eq(30)
+  end
+
 end
