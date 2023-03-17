@@ -1,7 +1,7 @@
 class Vessel
   attr_reader :volume
 
-  def initialize(name='FAKE', volume=100)
+  def initialize(name, volume)
     @name = name
     @volume = volume
     @be_empty = true
