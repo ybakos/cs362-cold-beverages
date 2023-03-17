@@ -21,4 +21,11 @@ describe 'A freezer' do
     freezer.turn_off
     expect(freezer.power).to eq(:off)
   end
+
+  it 'can have items added to it' do
+    item = Item.new('FAKE', 5)
+    freezer = Freezer.new
+    freezer.add(item)
+    expect(freezer.contents).to contain_exactly(item)
+  end
 end
