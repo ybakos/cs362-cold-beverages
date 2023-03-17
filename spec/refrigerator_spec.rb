@@ -90,4 +90,16 @@ describe 'A refrigerator' do
     refrigerator.set_chiller_level(2)
     expect(refrigerator.chiller.temperature).to eq(60)
   end
+
+  it 'can set its freezer level' do
+    chiller = Chiller.new
+    freezer = Freezer.new
+    water_reservoir = WaterReservoir.new
+    water_dispenser = WaterDispenser.new(water_reservoir)
+    refrigerator = Refrigerator.new(chiller, freezer, water_reservoir, water_dispenser)
+
+    refrigerator.set_freezer_level(2)
+    expect(refrigerator.freezer.temperature).to eq(50)
+  end
+  
 end
