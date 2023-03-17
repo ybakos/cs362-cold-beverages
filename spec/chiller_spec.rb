@@ -35,5 +35,11 @@ describe 'A chiller' do
     chiller.add(item)
     expect(chiller.remaining_capacity).to eq(95)
   end
+
+  it 'can set its own temperature level' do
+    chiller = Chiller.new
+    chiller.set_level(2)
+    expect(chiller.temperature).to eq(60)
+  end
   
 end
