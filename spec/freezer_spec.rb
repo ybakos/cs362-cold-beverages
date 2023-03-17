@@ -28,4 +28,11 @@ describe 'A freezer' do
     freezer.add(item)
     expect(freezer.contents).to contain_exactly(item)
   end
+
+  it 'can calculate its own remaining capacity' do
+    item = Item.new('FAKE', 5)
+    freezer = Freezer.new
+    freezer.add(item)
+    expect(freezer.remaining_capacity).to eq(95)
+  end
 end
