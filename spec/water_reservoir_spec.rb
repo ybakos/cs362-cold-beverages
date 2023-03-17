@@ -30,4 +30,10 @@ describe 'A water reservoir' do
     water_reservoir.fill
     expect(water_reservoir.empty?).to eq(false)
   end
+
+  it 'can be drained by a given volume' do
+    water_reservoir = WaterReservoir.new(20, 10)
+    water_reservoir.drain(5)
+    expect(water_reservoir.current_water_volume).to eq(5)
+  end
 end
