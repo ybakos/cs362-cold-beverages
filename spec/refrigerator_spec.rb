@@ -33,5 +33,14 @@ describe 'A refrigerator' do
     refrigerator.freeze(item)
     expect(refrigerator.freezer.contents).to contain_exactly(item)
   end
-  
+
+  it 'can calculate its total capacity' do
+    chiller = Chiller.new
+    freezer = Freezer.new
+    water_reservoir = WaterReservoir.new
+    water_dispenser = WaterDispenser.new(water_reservoir)
+    refrigerator = Refrigerator.new(chiller, freezer, water_reservoir, water_dispenser)
+    
+    expect(refrigerator.total_capacity).to eq(chiller.capacity + freezer.capacity)
+  end
 end
