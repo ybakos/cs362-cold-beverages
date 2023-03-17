@@ -22,4 +22,11 @@ describe 'A chiller' do
     expect(chiller.power).to eq(:off)
   end
   
+  it 'can have items added to it' do
+    item = Item.new('FAKE', 5)
+    chiller = Chiller.new
+    chiller.add(item)
+    expect(chiller.contents).to contain_exactly(item)
+  end
+  
 end
