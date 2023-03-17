@@ -41,4 +41,5 @@ describe 'A freezer' do
     freezer.set_level(2)
     expect(freezer.temperature).to eq(50)
   end
+  
 end

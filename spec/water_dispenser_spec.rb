@@ -15,4 +15,5 @@ describe 'A water dispenser' do
     water_dispenser.dispense(vessel)
     expect(water_dispenser.reservoir.current_water_volume).to eq(5)
   end
+  
 end
