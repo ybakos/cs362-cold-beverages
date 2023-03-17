@@ -14,4 +14,8 @@ describe 'A water reservoir' do
     expect(water_reservoir.current_water_volume).to eq(10)
   end
 
+  it 'is is empty upon creation' do
+    water_reservoir = WaterReservoir.new
+    expect(water_reservoir.empty?).to eq(true)
+  end
 end
