@@ -35,4 +35,10 @@ describe 'A freezer' do
     freezer.add(item)
     expect(freezer.remaining_capacity).to eq(95)
   end
+
+  it 'can set its own temperature level' do
+    freezer = Freezer.new
+    freezer.set_level(2)
+    expect(freezer.temperature).to eq(50)
+  end
 end
