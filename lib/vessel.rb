@@ -7,7 +7,7 @@ class Vessel
     @current_water_volume = 0
   end
 
-  def fill
+  def fill(volume)
     @current_water_volume = volume
   end
   

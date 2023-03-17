@@ -36,4 +36,11 @@ describe 'A water reservoir' do
     water_reservoir.drain(5)
     expect(water_reservoir.current_water_volume).to eq(5)
   end
+
+  it 'will not drain more than it has, but all that is left' do
+    water_reservoir = WaterReservoir.new(20, 3)
+    water_reservoir.drain(5)
+    expect(water_reservoir.current_water_volume).to eq(0)
+  end
+  
 end

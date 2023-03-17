@@ -16,13 +16,13 @@ describe 'A vessel for holding liquid' do
 
   it 'is no longer empty when we fill it' do
     vessel = Vessel.new('FAKE', 100)
-    vessel.fill
+    vessel.fill(vessel.volume)
     expect(vessel).to_not be_empty
   end
 
   it 'should equal its volume when filled' do
     vessel = Vessel.new('FAKE', 100)
-    vessel.fill
+    vessel.fill(vessel.volume)
     expect(vessel.current_water_volume).to eq(vessel.volume)
   end
 end
