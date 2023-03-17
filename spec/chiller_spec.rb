@@ -28,5 +28,12 @@ describe 'A chiller' do
     chiller.add(item)
     expect(chiller.contents).to contain_exactly(item)
   end
+
+  it 'can calculate its own remaining capacity' do
+    item = Item.new('FAKE', 5)
+    chiller = Chiller.new
+    chiller.add(item)
+    expect(chiller.remaining_capacity).to eq(95)
+  end
   
 end
