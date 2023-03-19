@@ -1,7 +1,7 @@
 class WaterReservoir
 
   attr_reader :capacity
-  attr_accessor :current_water_volume, :volume
+  attr_accessor :volume
 
   def initialize(capacity = 10, initial_water_volume = 0)
     @capacity = capacity
