@@ -3,7 +3,7 @@ require_relative '../lib/vessel'
 describe 'A vessel for holding liquid' do
 
   it 'has a name and volume' do
-    vessel = Vessel.new
+    vessel = Vessel.new('FAKE', 100)
     expect(vessel.name).to eq('FAKE')
     expect(vessel.volume).to eq(100)
   end
@@ -18,4 +18,5 @@ describe 'A vessel for holding liquid' do
     vessel.fill
     expect(vessel).to_not be_empty
   end
+
 end
