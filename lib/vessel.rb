@@ -11,7 +11,7 @@ class Vessel
     @contents.empty?
   end
 
-  def fill(item = "")
+  def fill(*item)
     @contents << item
   end
 
