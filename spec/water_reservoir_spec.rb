@@ -17,4 +17,6 @@ describe 'A water reservoir' do
     expect(water_reservoir.volume).to eq(0)
   end
 
+  
+
 end
