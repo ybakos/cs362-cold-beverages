@@ -33,8 +33,8 @@ describe 'A refrigerator' do
   end
 
   it 'adds item to freezer by freeze function' do
-    refrigerator.chill(pizza)
-    expect(refrigerator.chiller).to_not be_empty
+    refrigerator.freeze(pizza)
+    expect(refrigerator.freezer).to_not be_empty
   end
 
   it 'total capacity includes both the freezers and the chillers capacity' do
