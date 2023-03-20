@@ -17,6 +17,13 @@ describe 'A water reservoir' do
     expect(water_reservoir.volume).to eq(0)
   end
 
-  
+  it 'can be drained but will never be negative' do
+    water_reservoir.fill
+    water_reservoir.drain(5)
+    expect(water_reservoir.volume).to eq(5)
+    water_reservoir.drain(10)
+    expect(water_reservoir.volume).to_not eq(-5)
+    expect(water_reservoir.volume).to eq(0)
+  end
 
 end
