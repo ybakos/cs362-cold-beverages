@@ -12,8 +12,8 @@ class WaterReservoir
     @volume == 0
   end
 
-  def fill
-    @volume = capacity
+  def fill(volume)
+    @volume += volume
   end
 
   def drain(volume)
