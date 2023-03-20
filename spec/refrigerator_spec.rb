@@ -44,6 +44,13 @@ describe 'A refrigerator' do
     expect(refrigerator.freezer.power).to be :on
   end
 
+  it 'should power off both freezer and chiller when turned off' do
+    refrigerator.unplug
+    expect(refrigerator.power).to be :off
+    expect(refrigerator.chiller.power).to be :off
+    expect(refrigerator.freezer.power).to be :off
+  end
+
   # it '' do
   # end
 end
