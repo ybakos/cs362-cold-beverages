@@ -1,23 +1,35 @@
 class WaterReservoir
 
   attr_reader :capacity
-  attr_accessor :current_water_volume
+  attr_accessor :volume
 
   def initialize(capacity = 10, initial_water_volume = 0)
     @capacity = capacity
-    @current_water_volume = initial_water_volume
+    if initial_water_volume > capacity
+      @volume = capacity
+    else
+      @volume = initial_water_volume
+    end
   end
 
   def empty?
-    current_water_volume == 0
+    @volume == 0
   end
 
-  def fill
-    current_water_volume = capacity
+  def fill(volume)
+    if capacity < (@volume + volume)
+      @volume = capacity
+    else
+      @volume += volume
+    end
   end
 
   def drain(volume)
-    self.current_water_volume -= volume
+    if volume <= @volume
+      @volume -= volume.to_i
+    else
+      @volume = 0
+    end
   end
 
 end

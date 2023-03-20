@@ -2,13 +2,17 @@ class Freezer
 
   ROOM_TEMPERATURE = 70
 
-  attr_reader :capacity, :temperature
+  attr_reader :capacity, :temperature, :power
 
   def initialize(capacity = 100)
     @capacity = capacity
     @temperature = ROOM_TEMPERATURE
     @power = :off
     @contents = []
+  end
+
+  def empty?
+    @contents.empty?
   end
 
   def turn_on
