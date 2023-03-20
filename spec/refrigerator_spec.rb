@@ -15,6 +15,10 @@ describe 'A refrigerator' do
 
   refrigerator = Refrigerator.new(chiller, freezer, water_dispenser, water_reservoir)
 
+  it 'should return the correct status before changes to status when to_s is called' do
+    expect(refrigerator.to_s).to eq("Power: off\nStorage: 200 of 200 available\nTemps: Chiller is 70, Freezer is 70\nWater: Reservoir has 0 remaining.\n")
+  end
+
   it 'has a chiller that starts empty' do
     expect(refrigerator.chiller).to be_empty
   end
@@ -51,6 +55,7 @@ describe 'A refrigerator' do
     expect(refrigerator.freezer.power).to be :off
   end
 
-  # it '' do
-  # end
+  it 'should return the correct status after changes to status when to_s is called' do
+    expect(refrigerator.to_s).to eq("Power: off\nStorage: 190 of 200 available\nTemps: Chiller is 70, Freezer is 70\nWater: Reservoir has 0 remaining.\n")
+  end
 end

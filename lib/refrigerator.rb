@@ -52,7 +52,7 @@ class Refrigerator
     Power: #{@power}
     Storage: #{remaining_capacity} of #{total_capacity} available
     Temps: Chiller is #{chiller.temperature}, Freezer is #{freezer.temperature}
-    Water: Reservoir has #{water_reservoir.current_water_volume} remaining.
+    Water: Reservoir has #{water_reservoir.volume} remaining.
     STATUS
   end
 
