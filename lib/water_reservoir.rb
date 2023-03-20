@@ -5,7 +5,11 @@ class WaterReservoir
 
   def initialize(capacity = 10, initial_water_volume = 0)
     @capacity = capacity
-    @volume = initial_water_volume
+    if initial_water_volume > capacity
+      @volume = capacity
+    else
+      @volume = initial_water_volume
+    end
   end
 
   def empty?

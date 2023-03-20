@@ -4,6 +4,12 @@ describe 'A water reservoir' do
 
   water_reservoir = WaterReservoir.new
 
+  it 'should initialize with a volume at most the same value as capacity' do
+    wr = WaterReservoir.new(10, 20)
+    expect(wr.volume).to eq(10)
+    expect(wr.volume).to_not eq(20)
+  end
+  
   it 'should be empty when initialized' do
     expect(water_reservoir).to be_empty
   end
