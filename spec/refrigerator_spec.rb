@@ -15,11 +15,23 @@ describe 'A refrigerator' do
 
   refrigerator = Refrigerator.new(chiller, freezer, water_dispenser, water_reservoir)
 
-  # it 'adds item to chiller by chilling them' do
-  #   refrigerator.chill(pizza)
-  #   print(refrigerator.chiller)
-  #   expect(refrigerator.chiller).to include?(pizza)
-  # end
+  it 'has a chiller that starts empty' do
+    expect(refrigerator.chiller).to be_empty
+  end
+
+  it 'has a freezer that starts empty' do
+    expect(refrigerator.freezer).to be_empty
+  end
+
+  it 'adds item to chiller by chill function' do
+    refrigerator.chill(pizza)
+    expect(refrigerator.chiller).to_not be_empty
+  end
+
+  it 'adds item to freezer by freeze function' do
+    refrigerator.chill(pizza)
+    expect(refrigerator.chiller).to_not be_empty
+  end
 
   it 'total capacity includes both the freezers and the chillers capacity' do
     expect(refrigerator.total_capacity).to eq(200)
