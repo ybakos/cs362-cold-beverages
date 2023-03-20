@@ -37,6 +37,13 @@ describe 'A refrigerator' do
     expect(refrigerator.total_capacity).to eq(200)
   end
 
+  it 'should power on both freezer and chiller when turned on' do
+    refrigerator.plug_in
+    expect(refrigerator.power).to be :on
+    expect(refrigerator.chiller.power).to be :on
+    expect(refrigerator.freezer.power).to be :on
+  end
+
   # it '' do
   # end
 end
