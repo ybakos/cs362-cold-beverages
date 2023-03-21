@@ -51,6 +51,12 @@ describe 'A freezer' do
     expect(freezer.remaining_capacity).to be a_sensible_remaining_capacity
   end
 
+  it 'can have it\'s level set' do
+    freezer.set_level 5
+
+    expect(freezer.temperature).to be room_temp - 50
+  end
+
 end
 
 class FreezerTest < Freezer
