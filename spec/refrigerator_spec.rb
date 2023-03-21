@@ -64,6 +64,12 @@ describe 'A refrigerator' do
 
     refrigerator.set_chiller_level(5)
   end
+
+  it 'can set the freezer level' do
+    expect(freezer).to receive(:set_level)
+
+    refrigerator.set_freezer_level(5)
+  end
 end
 
 class RefrigeratorTest < Refrigerator
