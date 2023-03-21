@@ -9,11 +9,11 @@ describe 'A water reservoir' do
   end
 
   it 'has an initial capacity of 10' do
-    expect(water_reservoir.capacity).to be(10)
+    expect(water_reservoir.capacity).to be 10
   end
 
   it 'has an initial water volume of 0' do
-    expect(water_reservoir.current_water_volume).to be(0)
+    expect(water_reservoir.current_water_volume).to be 0
   end
 
   it 'can be empty' do
