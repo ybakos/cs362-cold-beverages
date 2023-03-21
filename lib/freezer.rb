@@ -11,6 +11,18 @@ class Freezer
     @contents = []
   end
 
+  def temperature
+    @temperature
+  end
+
+  def power
+    @power
+  end
+
+  def contents
+    @contents
+  end
+
   def turn_on
     @power = :on
   end
