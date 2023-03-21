@@ -10,6 +10,10 @@ describe 'A freezer' do
     expect(freezer.contents).to be_truthy
   end
 
+  it 'has an initial capacity of 100' do
+    expect(freezer.capacity).to be 100
+  end
+
   it 'can be turned on' do
     freezer.turn_on
 
