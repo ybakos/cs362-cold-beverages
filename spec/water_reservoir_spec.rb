@@ -27,4 +27,12 @@ describe 'A water reservoir' do
 
     expect(water_reservoir.empty?).to be false
   end
+
+  it 'can be drained' do
+    water_reservoir.current_water_volume = 17
+
+    water_reservoir.drain(6)
+
+    expect(water_reservoir.current_water_volume).to be 11
+  end
 end
