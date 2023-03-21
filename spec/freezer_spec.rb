@@ -5,6 +5,7 @@ describe 'A freezer' do
   let(:item) { double('Item') }
   let(:small_item) { double('Item') }
   let(:big_item) { double('Item') }
+  let(:room_temp) { 70 }
 
   it 'has a capacity and temperature' do
     expect(freezer.capacity).to be_truthy
@@ -15,6 +16,10 @@ describe 'A freezer' do
 
   it 'has an initial capacity of 100' do
     expect(freezer.capacity).to be 100
+  end
+
+  it 'has an initial temperature of room temperature' do
+    expect(freezer.temperature).to be room_temp
   end
 
   it 'can be turned on' do
