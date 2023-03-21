@@ -27,6 +27,13 @@ describe 'A refrigerator' do
     expect(refrigerator.freeze item).to be
   end
 
+  it 'can calculate total capacity' do
+    expect(chiller).to receive(:capacity).and_return 100
+    expect(freezer).to receive(:capacity).and_return 100
+
+    expect(refrigerator.total_capacity).to be 200
+  end
+
 end
 
 class RefrigeratorTest < Refrigerator
