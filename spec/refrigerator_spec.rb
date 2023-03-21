@@ -22,6 +22,11 @@ describe 'A refrigerator' do
     expect(refrigerator.chill item).to be
   end
 
+  it 'can freeze' do
+    expect(freezer).to receive(:add).and_return true
+    expect(refrigerator.freeze item).to be
+  end
+
 end
 
 class RefrigeratorTest < Refrigerator
