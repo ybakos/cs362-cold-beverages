@@ -10,6 +10,12 @@ describe 'A freezer' do
     expect(freezer.contents).to be_truthy
   end
 
+  it 'can be turned on' do
+    freezer.turn_on
+
+    expect(freezer.power).to be :on
+  end
+
 end
 
 class FreezerTest < Freezer
