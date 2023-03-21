@@ -11,3 +11,12 @@ describe 'A freezer' do
   end
 
 end
+
+class FreezerTest < Freezer
+  attr_reader :power, :contents
+
+  def initialize
+    super
+  end
+
+end
