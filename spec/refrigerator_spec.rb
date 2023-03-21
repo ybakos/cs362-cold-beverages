@@ -41,6 +41,14 @@ describe 'A refrigerator' do
     expect(refrigerator.remaining_capacity).to be 22
   end
 
+  it 'can be plugged in' do
+    expect(chiller).to receive(:turn_on)
+    expect(freezer).to receive(:turn_on)
+
+    refrigerator.plug_in
+
+    expect(refrigerator.power).to be :on
+  end
 end
 
 class RefrigeratorTest < Refrigerator
