@@ -16,6 +16,12 @@ describe 'A freezer' do
     expect(freezer.power).to be :on
   end
 
+  it 'can be turned off' do
+    freezer.turn_off
+
+    expect(freezer.power).to be :off
+  end
+
 end
 
 class FreezerTest < Freezer
