@@ -19,6 +19,10 @@ class Vessel
     @fluid
   end
 
+  def pour_into_vessel(water)
+    @fluid += water
+  end
+
   def fill
     @fluid = volume
   end

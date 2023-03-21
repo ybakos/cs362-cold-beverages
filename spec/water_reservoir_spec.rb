@@ -30,7 +30,8 @@ describe 'A water reservoir' do
 
     it "can drain the water resevoir" do
         reservoir = WaterReservoir.new(10,10)
-        reservoir.drain(5)
+        vessel = Vessel.new('FAKE', 5)
+        reservoir.drain(vessel, 5)
         expect(reservoir.current_water_volume).to eq(5)
     end
 
