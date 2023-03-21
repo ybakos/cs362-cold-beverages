@@ -70,6 +70,18 @@ describe 'A refrigerator' do
 
     refrigerator.set_freezer_level(5)
   end
+
+  it 'has a specific to_s' do
+    expect(chiller).to receive(:remaining_capacity).and_return 17
+    expect(freezer).to receive(:remaining_capacity).and_return 5
+    expect(chiller).to receive(:capacity).and_return 100
+    expect(freezer).to receive(:capacity).and_return 100
+    expect(chiller).to receive(:temperature).and_return 40
+    expect(freezer).to receive(:temperature).and_return 15
+    expect(water_reservoir).to receive(:current_water_volume).and_return 10
+
+    expect(refrigerator.to_s).to eq("Power: off\nStorage: 22 of 200 available\nTemps: Chiller is 40, Freezer is 15\nWater: Reservoir has 10 remaining.\n")
+  end
 end
 
 class RefrigeratorTest < Refrigerator
