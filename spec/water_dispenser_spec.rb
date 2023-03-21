@@ -15,9 +15,19 @@ describe 'A water dispenser' do
     before do
       expect(fake_water_reservoir).to receive(:drain).and_return(true)
       expect(fake_vessel).to receive(:volume).and_return(69)
+
+      expect(fake_vessel).to receive(:fill).and_return true
     end
 
     it { expect(water_dispenser.dispense(fake_vessel)).to be_truthy }
+  end
+
+  it 'expects the vessel is filled' do
+    expect(fake_vessel).to receive(:volume).and_return(5)
+    expect(fake_water_reservoir).to receive(:drain).and_return(true)
+    expect(fake_vessel).to receive(:fill)
+
+    water_dispenser.dispense fake_vessel
   end
 
 end
