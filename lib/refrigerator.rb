@@ -11,6 +11,30 @@ class Refrigerator
     @power = :off
   end
 
+  def chiller
+    @chiller
+  end
+
+  def freezer
+    @freezer
+  end
+
+  def control_panel
+    @control_panel
+  end
+
+  def water_dispenser
+    @water_dispenser
+  end
+
+  def water_reservoir
+    @water_reservoir
+  end
+
+  def power
+    @power
+  end
+
   def chill(item)
     chiller.add(item)
   end
