@@ -10,4 +10,8 @@ class Vessel
   def empty?
     @empty
   end
+
+  def fill
+
+  end
 end
