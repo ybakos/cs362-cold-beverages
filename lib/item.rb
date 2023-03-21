@@ -6,4 +6,12 @@ class Item
     @volume = volume
   end
 
+  def name
+    @name
+  end
+
+  def volume
+    @volume
+  end
+
 end
