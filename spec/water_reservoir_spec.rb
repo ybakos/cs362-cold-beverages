@@ -35,4 +35,12 @@ describe 'A water reservoir' do
         expect(reservoir.current_water_volume).to eq(5)
     end
 
+    it "prevents going into negative water" do
+        reservoir = WaterReservoir.new(10,10)
+        vessel = Vessel.new('FAKE', 100)
+        reservoir.drain(vessel, 100)
+        expect(reservoir.current_water_volume).to eq(0)
+    end
+
+
 end

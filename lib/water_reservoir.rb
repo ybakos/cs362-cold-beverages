@@ -31,7 +31,6 @@ class WaterReservoir
       vessel.pour_into_vessel(volume)
 
     else
-      puts "Not enough water! pouring what we can"
       vessel.pour_into_vessel(current_water_volume)
       self.current_water_volume = 0
     end
