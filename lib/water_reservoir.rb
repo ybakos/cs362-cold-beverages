@@ -8,6 +8,10 @@ class WaterReservoir
     @current_water_volume = initial_water_volume
   end
 
+  def current_water_volume
+    @current_water_volume
+  end
+
   def empty?
     current_water_volume == 0
   end
