@@ -2,6 +2,7 @@ require_relative '../lib/freezer'
 
 describe 'A freezer' do
   let(:freezer) { FreezerTest.new }
+  let(:item) { double('Item') }
 
   it 'has a capacity and temperature' do
     expect(freezer.capacity).to be_truthy
@@ -24,6 +25,12 @@ describe 'A freezer' do
     freezer.turn_off
 
     expect(freezer.power).to be :off
+  end
+
+  it 'can have an item added to it' do
+    freezer.add item
+
+    expect(freezer.contents).to include item
   end
 
 end
