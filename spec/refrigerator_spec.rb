@@ -34,6 +34,13 @@ describe 'A refrigerator' do
     expect(refrigerator.total_capacity).to be 200
   end
 
+  it 'can calculate remaining capacity' do
+    expect(chiller).to receive(:remaining_capacity).and_return 17
+    expect(freezer).to receive(:remaining_capacity).and_return 5
+
+    expect(refrigerator.remaining_capacity).to be 22
+  end
+
 end
 
 class RefrigeratorTest < Refrigerator
