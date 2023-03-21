@@ -6,6 +6,7 @@ describe 'A refrigerator' do
   let(:water_dispenser) { double 'WaterDispenser' }
   let(:water_reservoir) { double 'WaterReservoir' }
   let(:refrigerator) { RefrigeratorTest.new(chiller, freezer, water_dispenser, water_reservoir)}
+  let(:item) { double 'Item' }
 
   it 'has a chiller, freezer, control_panel, water dispenser, water reservoir, and power status' do
     expect(refrigerator.chiller).to be chiller
@@ -14,6 +15,11 @@ describe 'A refrigerator' do
     expect(refrigerator.water_dispenser).to be water_dispenser
     expect(refrigerator.water_reservoir).to be water_reservoir
     expect(refrigerator.power).to be_truthy
+  end
+
+  it 'can chill' do
+    expect(chiller).to receive(:add).and_return true
+    expect(refrigerator.chill item).to be
   end
 
 end
