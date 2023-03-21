@@ -49,6 +49,15 @@ describe 'A refrigerator' do
 
     expect(refrigerator.power).to be :on
   end
+
+  it 'can be unplugged' do
+    expect(chiller).to receive(:turn_off)
+    expect(freezer).to receive(:turn_off)
+
+    refrigerator.unplug
+
+    expect(refrigerator.power).to be :off
+  end
 end
 
 class RefrigeratorTest < Refrigerator
