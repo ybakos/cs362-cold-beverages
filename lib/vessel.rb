@@ -7,4 +7,7 @@ class Vessel
     @empty = true
   end
 
+  def empty?
+    @empty
+  end
 end
