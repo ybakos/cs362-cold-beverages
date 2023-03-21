@@ -12,12 +12,16 @@ class WaterReservoir
     @current_water_volume
   end
 
+  def capacity
+    @capacity
+  end
+
   def empty?
     current_water_volume == 0
   end
 
   def fill
-    current_water_volume = capacity
+    self.current_water_volume = capacity
   end
 
   def drain(volume)
