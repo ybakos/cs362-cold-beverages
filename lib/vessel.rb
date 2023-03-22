@@ -15,4 +15,12 @@ class Vessel
     @empty = false
   end
 
+  def get_volume
+    @volume
+  end
+
+  def add_volume(value)
+    @volume = @volume + value
+  end
+
 end

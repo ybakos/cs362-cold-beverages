@@ -25,4 +25,13 @@ describe 'A water dispenser' do
     expect(water_dispenser.dispense(vessel)).to eq(0)
   end
 
+  it 'vessel is filled' do
+    reservoir = WaterReservoir.new()
+    water_dispenser = WaterDispenser.new(reservoir)
+    vessel = Vessel.new()
+    expect(vessel).to be_empty
+    water_dispenser.dispense(vessel)
+    expect(vessel).to_not be_empty
+  end
+
 end
